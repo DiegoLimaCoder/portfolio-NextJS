@@ -2,17 +2,19 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+
 export function Hero() {
   return (
     <section className="min-h-screen flex items-center bg-[#191919] dark:bg-zinc-900">
       <div className="max-w-[1204px] mx-auto px-4 sm:px-6 lg:px-8 w-full ">
-        <div className="grid lg:grid-cols-2  gap-20 items-center">
+        <div className="grid lg:grid-cols-2  gap-20 items-center ">
           {/* Text Context */}
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="flex flex-col items-center lg:items-start text-center lg:text-left"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-zinc-100 mb-6">
               Olá, eu sou <span className="text-blue-500">Diego Lima</span>
@@ -25,16 +27,16 @@ export function Hero() {
 
             <div className="flex gap-4">
               <Link
+                href="/contact"
+                className="border border-zinc-600 hover:border-zinc-400  font-bold  text-zinc-300 px-8 py-3 rounded-lg transition-colors"
+              >
+                Contato
+              </Link>
+              <Link
                 href="/projects"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 font-bold rounded-lg transition-colors"
               >
                 Projetos
-              </Link>
-              <Link
-                href="/contact"
-                className="border border-zinc-600 hover:border-zinc-400 hover:bg-white hover:text-zinc-900 font-bold  text-zinc-300 px-8 py-3 rounded-lg transition-colors"
-              >
-                Contato
               </Link>
             </div>
           </motion.div>
