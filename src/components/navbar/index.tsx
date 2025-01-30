@@ -7,6 +7,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Menu } from "lucide-react";
+import { CodeXml } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -48,8 +49,9 @@ export function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-xl font-bold text-zinc-200 hover:text-zinc-100 transition-colors"
+            className="text-xl font-bold text-zinc-200 hover:text-zinc-100 transition-colors flex gap-2 items-center"
           >
+            <CodeXml className="text-blue-500" />
             PROLIMA
           </Link>
 
